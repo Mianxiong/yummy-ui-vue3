@@ -1,6 +1,6 @@
 <template>
   <template v-if="visible">
-    <teleport to='body'>
+    <teleport to="body">
       <div class="gulu-dialog-overlay" @click="OnClickOverlay"></div>
       <div class="gulu-dialog-wrapper">
         <div class="gulu-dialog">
@@ -12,7 +12,7 @@
             <slot name="content"/>
           </main>
           <footer>
-            <Button level="main" @click="confirm">OK</Button>
+            <Button level="main" @click="ok">OK</Button>
             <Button @click="cancel">Cancel</Button>
           </footer>
         </div>

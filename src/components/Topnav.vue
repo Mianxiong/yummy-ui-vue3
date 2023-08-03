@@ -1,18 +1,33 @@
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <router-link to="/" class="logo">
+      <svg class="icon">
+        <use xlink:href="#icon-caomao"/>
+      </svg>
+    </router-link>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+        <router-link to="/doc">文档</router-link>
+      </li>
     </ul>
-    <span class="toggleAside" @click="toggleAside"></span>
+    <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleAside">
+      <use xlink:href="#icon-menu"/>
+    </svg>
   </div>
 </template>
 
 <script lang="ts" setup>
-import {inject, Ref} from "vue"
+import {inject, Ref, toRefs} from "vue"
+
+interface Props {
+  toggleMenuButtonVisible?: boolean
+}
 
 const asideVisible = inject<Ref<boolean>>("asideVisible")
+const props = withDefaults(defineProps<Props>(), {
+  toggleMenuButtonVisible: false
+})
+const {toggleMenuButtonVisible} = toRefs(props)
 const toggleAside = () => {
   asideVisible.value = !asideVisible.value
 }
@@ -20,11 +35,11 @@ const toggleAside = () => {
 </script>
 
 <style lang="scss" scoped>
+$color: #007974;
 .topnav {
-  background: pink;
+  color: $color;
   display: flex;
   padding: 16px;
-  //position: relative;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,6 +51,11 @@ const toggleAside = () => {
   > .logo {
     max-width: 6em;
     margin-right: auto;
+
+    > svg {
+      width: 48px;
+      height: 48px;
+    }
   }
 
   > .menu {
@@ -49,10 +69,9 @@ const toggleAside = () => {
   }
 
   > .toggleAside {
-    display: none;
-    width: 24px;
-    height: 24px;
-    background: red;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
     position: absolute;
     left: 16px;
     top: 50%;
