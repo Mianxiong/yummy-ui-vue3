@@ -9,6 +9,7 @@ import DocDemo from "./components/DocDemo.vue"
 import Intro from "./views/Intro.vue"
 import GetStarted from "./views/GetStarted.vue"
 import Install from "./views/Install.vue"
+import CarouselDemo from "./components/CarouselDemo.vue"
 // import Markdown from "./components/Markdown.vue"
 // import {h} from "vue"
 
@@ -34,6 +35,7 @@ export const router = createRouter({
                 {path: "button", component: ButtonDemo},
                 {path: "dialog", component: DialogDemo},
                 {path: "tabs", component: TabsDemo},
+                {path: "carousel", component: CarouselDemo}
             ]
         },
     ]
