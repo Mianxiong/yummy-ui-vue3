@@ -39,7 +39,6 @@ $color: #007974;
 .topnav {
   color: $color;
   display: flex;
-  padding: 16px;
   position: fixed;
   top: 0;
   left: 0;

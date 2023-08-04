@@ -45,7 +45,7 @@
             <router-link to="/doc/bread">Bread组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/city">City组件</router-link>
+            <router-link to="/doc/city">City Select组件</router-link>
           </li>
           <li>
             <router-link to="/doc/pagination">Pagination组件</router-link>
@@ -77,6 +77,7 @@ $aside-index: 10;
 
   > .nav {
     flex-shrink: 0;
+    background-color: #f9f9f9;
   }
 
   > .content {
@@ -90,10 +91,12 @@ $aside-index: 10;
 }
 
 .content {
+  margin-top: 15px;
   display: flex;
 
   > aside {
     flex-shrink: 0;
+    padding: 100px 0;
   }
 
   > main {

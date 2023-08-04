@@ -3,11 +3,11 @@
     <div class="topnavAndBanner">
       <topnav/>
       <div class="banner">
-        <h1>咕噜UI</h1>
+        <h1>yummy UI</h1>
         <h2>一个厉害的UI框架</h2>
         <p class="actions">
           <a href="https://github">GitHub</a>
-          <router-link to="/doc">开始</router-link>
+          <router-link to="/doc">Get Started</router-link>
         </p>
       </div>
     </div>
@@ -43,7 +43,7 @@ import Topnav from "../components/Topnav.vue";
 
 
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 $green: #02bcb0;
 $color: #007974;
 $border-radius: 4px;
@@ -54,6 +54,7 @@ topnavAndBanner {
           rgba(183, 233, 230, 1) 100%
   );
   clip-path: ellipse(80% 60% at 50% 40%);
+  padding-bottom: 88px;
 }
 
 .features {
@@ -127,7 +128,7 @@ topnavAndBanner {
       display: inline-block;
       border-radius: $border-radius;
       padding: 8px 24px;
-      font-size: 26px;
+      font-size: 20px;
 
       &:hover {
         text-decoration: none;
@@ -138,7 +139,8 @@ topnavAndBanner {
 
 .topnav {
   display: flex;
-  padding: 16px;
+  padding: 16px 60px;
+  box-shadow: 0 5px 5px rgb(51 51 51 / 10%);
 
   > .logo {
     max-width: 6em;
