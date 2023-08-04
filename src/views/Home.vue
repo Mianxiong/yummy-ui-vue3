@@ -6,7 +6,7 @@
         <h1>yummy UI</h1>
         <h2>一个厉害的UI框架</h2>
         <p class="actions">
-          <a href="https://github">GitHub</a>
+          <a href="https://github.com/Mianxiong/yummy-ui-vue3">GitHub</a>
           <router-link to="/doc">Get Started</router-link>
         </p>
       </div>
@@ -130,7 +130,7 @@ topnavAndBanner {
 }
 
 .banner {
-  padding: 90px 0;
+  padding: 150px 0 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
