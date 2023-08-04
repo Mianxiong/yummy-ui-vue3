@@ -15,6 +15,8 @@ import CheckboxDemo from "./components/CheckboxDemo.vue"
 import ConfirmDemo from "./components/ConfirmDemo.vue"
 import MessageDemo from "./components/MessageDemo.vue"
 import BreadDemo from "./components/BreadDemo.vue"
+import CityDemo from "./components/CityDemo.vue"
+import PaginationDemo from "./components/PaginationDemo.vue"
 // import Markdown from "./components/Markdown.vue"
 // import {h} from "vue"
 
@@ -46,6 +48,8 @@ export const router = createRouter({
                 {path: "confirm", component: ConfirmDemo},
                 {path: "message", component: MessageDemo},
                 {path: "bread", component: BreadDemo},
+                {path: "city", component: CityDemo},
+                {path: "pagination", component: PaginationDemo},
             ]
         },
     ]
