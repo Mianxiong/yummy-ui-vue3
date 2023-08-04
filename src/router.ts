@@ -14,6 +14,7 @@ import DialogDemo from "./components/DialogDemo.vue"
 import CheckboxDemo from "./components/CheckboxDemo.vue"
 import ConfirmDemo from "./components/ConfirmDemo.vue"
 import MessageDemo from "./components/MessageDemo.vue"
+import BreadDemo from "./components/BreadDemo.vue"
 // import Markdown from "./components/Markdown.vue"
 // import {h} from "vue"
 
@@ -44,6 +45,7 @@ export const router = createRouter({
                 {path: "checkbox", component: CheckboxDemo},
                 {path: "confirm", component: ConfirmDemo},
                 {path: "message", component: MessageDemo},
+                {path: "bread", component: BreadDemo},
             ]
         },
     ]
