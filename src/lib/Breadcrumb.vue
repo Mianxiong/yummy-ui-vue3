@@ -36,7 +36,7 @@ export default {
 
   &-item {
     a {
-      font-size: 30px;
+      font-size: 22px;
       color: #666;
       transition: all 0.4s;
 
@@ -46,15 +46,15 @@ export default {
     }
 
     span {
-      font-size: 40px;
+      font-size: 22px;
     }
   }
 
   i {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 5px;
     margin-right: 5px;
-    line-height: 48px;
+    line-height: 35px;
   }
 }
 

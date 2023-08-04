@@ -67,7 +67,6 @@ const asideVisible = inject<Ref<boolean>>("asideVisible")
 
 
 </script>
-
 <style lang="scss" scoped>
 $aside-index: 10;
 .layout {
@@ -85,9 +84,7 @@ $aside-index: 10;
     padding-top: 60px;
     padding-left: 156px;
     @media (max-width: 500px) {
-      padding: 16px;
-      width: 100%;
-      overflow: auto;
+      padding-left: 0;
     }
   }
 }
@@ -103,22 +100,28 @@ $aside-index: 10;
 
   > main {
     flex-grow: 1;
-    padding: 16px;
-    background: white;
+    padding: 20px 0px 20px 100px;
+    background-color: #f9f9f9;
+  }
+
+  @media (max-width: 500px) {
+    > main {
+      padding: 16px 0px 16px 16px;
+      width: 100%;
+      overflow: auto;
+    }
   }
 }
 
 aside {
-  background: lightblue;
-  width: 150px;
-  padding: 16px 0;
   position: fixed;
   top: 0;
   left: 0;
   padding-top: 70px;
   height: 100%;
-
   z-index: $aside-index;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
 
   > h2 {
     margin-bottom: 4px;
@@ -134,7 +137,7 @@ aside {
       }
 
       .router-link-active {
-        background: white;
+        background-color: #e5f2fa;
       }
     }
   }
@@ -144,3 +147,91 @@ aside {
   }
 }
 </style>
+
+<!--<style lang="scss" scoped>-->
+<!--$aside-index: 10;-->
+<!--.layout {-->
+<!--  display: flex;-->
+<!--  flex-direction: column;-->
+<!--  height: 100vh;-->
+
+<!--  > .nav {-->
+<!--    flex-shrink: 0;-->
+<!--    background-color: #f9f9f9;-->
+<!--  }-->
+
+<!--  > .content {-->
+<!--    flex-grow: 1;-->
+<!--    padding-top: 60px;-->
+<!--    padding-left: 156px;-->
+<!--    @media (max-width: 500px) {-->
+<!--      padding: 16px;-->
+<!--      width: 100%;-->
+<!--      overflow: auto;-->
+<!--    }-->
+<!--  }-->
+<!--}-->
+
+<!--.content {-->
+<!--  margin-top: 15px;-->
+<!--  display: flex;-->
+
+<!--  > aside {-->
+<!--    flex-shrink: 0;-->
+<!--    padding: 100px 0;-->
+<!--  }-->
+
+<!--  > main {-->
+<!--    flex-grow: 1;-->
+<!--    //padding: 16px;-->
+<!--    //background: white;-->
+<!--    padding: 20px 0px 20px 100px;-->
+<!--    background-color: #f9f9f9;-->
+<!--  }-->
+
+<!--  @media (max-width: 500px) {-->
+<!--    > main {-->
+<!--      padding: 16px;-->
+<!--      padding: 16px 0px 16px 16px;-->
+<!--      width: 100%;-->
+<!--      overflow: auto;-->
+<!--    }-->
+<!--  }-->
+<!--}-->
+
+<!--aside {-->
+<!--  background: lightblue;-->
+<!--  width: 150px;-->
+<!--  padding: 16px 0;-->
+<!--  position: fixed;-->
+<!--  top: 0;-->
+<!--  left: 0;-->
+<!--  padding-top: 70px;-->
+<!--  height: 100%;-->
+
+<!--  z-index: $aside-index;-->
+
+<!--  > h2 {-->
+<!--    margin-bottom: 4px;-->
+<!--    padding: 0 16px;-->
+<!--  }-->
+
+<!--  > ol {-->
+<!--    > li {-->
+<!--      > a {-->
+<!--        padding: 4px 16px;-->
+<!--        display: block;-->
+<!--        text-decoration: none;-->
+<!--      }-->
+
+<!--      .router-link-active {-->
+<!--        background: white;-->
+<!--      }-->
+<!--    }-->
+<!--  }-->
+
+<!--  main {-->
+<!--    overflow: auto;-->
+<!--  }-->
+<!--}-->
+<!--</style>-->
