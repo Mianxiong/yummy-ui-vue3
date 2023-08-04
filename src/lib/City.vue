@@ -214,7 +214,7 @@ const changeItem = (item) => {
   .gulu-city {
     display: inline-block;
     position: relative;
-    z-index: 400;
+    z-index: 9;
 
     .select {
       border: 1px solid #e4e4e4;
