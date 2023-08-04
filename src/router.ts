@@ -10,6 +10,10 @@ import Intro from "./views/Intro.vue"
 import GetStarted from "./views/GetStarted.vue"
 import Install from "./views/Install.vue"
 import CarouselDemo from "./components/CarouselDemo.vue"
+import DialogDemo from "./components/DialogDemo.vue"
+import CheckboxDemo from "./components/CheckboxDemo.vue"
+import ConfirmDemo from "./components/ConfirmDemo.vue"
+import MessageDemo from "./components/MessageDemo.vue"
 // import Markdown from "./components/Markdown.vue"
 // import {h} from "vue"
 
@@ -35,7 +39,11 @@ export const router = createRouter({
                 {path: "button", component: ButtonDemo},
                 {path: "dialog", component: DialogDemo},
                 {path: "tabs", component: TabsDemo},
-                {path: "carousel", component: CarouselDemo}
+                {path: "carousel", component: CarouselDemo},
+                {path: "dialog", component: DialogDemo},
+                {path: "checkbox", component: CheckboxDemo},
+                {path: "confirm", component: ConfirmDemo},
+                {path: "message", component: MessageDemo},
             ]
         },
     ]
