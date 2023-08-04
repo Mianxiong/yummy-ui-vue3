@@ -37,4 +37,11 @@ h3 {
   font-size: 20px;
   margin-bottom: 15px;
 }
+
+@media (max-width: 500px) {
+  .home-banner {
+    width: 100%;
+    height: 241px;
+  }
+}
 </style>
